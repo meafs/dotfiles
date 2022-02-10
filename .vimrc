@@ -2,6 +2,9 @@ call plug#begin('~/.vim/plugged')
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 	Plug 'whatyouhide/vim-gotham'
+	Plug 'dylanaraps/wal.vim'
+	Plug 'preservim/nerdcommenter'
+	Plug 'preservim/nerdtree'
 call plug#end()
 
 colorscheme gotham
@@ -181,3 +184,4 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+colorscheme wal
